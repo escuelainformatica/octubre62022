@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>{{$titulo}}</title>
+    <title>@yield("titulo") </title>
 </head>
 <body>
 
@@ -16,32 +16,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h1>Tabla segunda version </h1>
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th>Id</th>
-                    <th>Ciudad</th>
-                    <th>Temp</th>
-                    <th>Clima</th>
-                    <th>Icono</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($climas as $clima)
-                <tr>
-                    <td>{{$clima->id}}</td>
-                    <td>{{$clima->nombreciudad}}</td>
-                    <td>{{$clima->temperatura}}</td>
-                    <td>{{$clima->tipoclima}}</td>
-                    <td>{{$clima->icono}}</td>
-                </tr>
-                @endforeach
-                </tbody>
-            </table>
-
-
-
+            @section('contenido')
+            @show
         </div>
 
     </div>

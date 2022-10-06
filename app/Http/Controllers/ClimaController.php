@@ -10,6 +10,6 @@ class ClimaController extends Controller
 {
     public function listar() {
         $climas=Clima::all();  // Eloquent
-        return view('clima.listar2',['climas'=>$climas]);
+        return view('clima.listar3',['climas'=>$climas]);
     }
 }
