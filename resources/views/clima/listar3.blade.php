@@ -2,6 +2,7 @@
 @section('titulo','listado')
 @section('contenido')
     <h1>Tabla tercer version </h1>
+    @parent
     <table class="table">
         <thead class="thead-dark">
         <tr>
