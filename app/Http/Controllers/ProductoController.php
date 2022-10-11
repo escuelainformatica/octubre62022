@@ -58,7 +58,9 @@ class ProductoController extends Controller
                 return view('producto.actualizar',['prod'=>$prod,'mensajeerror'=>'']);
         }
     }
-    public function borrar($idProducto) {
-
+    public function borrar(Request $req,$idProducto) {
+        $prod = Producto::find($idProducto);
+        $prod->delete();
+        return redirect('/producto/');
     }
 }
